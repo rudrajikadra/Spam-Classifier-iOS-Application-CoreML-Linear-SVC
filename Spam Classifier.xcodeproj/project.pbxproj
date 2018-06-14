@@ -12,6 +12,9 @@
 		73BEA2152031F43A0050E20A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73BEA2132031F43A0050E20A /* Main.storyboard */; };
 		73BEA2172031F43A0050E20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BEA2162031F43A0050E20A /* Assets.xcassets */; };
 		73BEA21A2031F43A0050E20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73BEA2182031F43A0050E20A /* LaunchScreen.storyboard */; };
+		73BEA2222031F4890050E20A /* SpamClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 73BEA2212031F4890050E20A /* SpamClassifier.mlmodel */; };
+		73BEA225203200890050E20A /* wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 73BEA223203200890050E20A /* wordlist.txt */; };
+		73BEA226203200890050E20A /* SMSSpamCollection.txt in Resources */ = {isa = PBXBuildFile; fileRef = 73BEA224203200890050E20A /* SMSSpamCollection.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		73BEA2162031F43A0050E20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73BEA2192031F43A0050E20A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73BEA21B2031F43A0050E20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73BEA2212031F4890050E20A /* SpamClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SpamClassifier.mlmodel; sourceTree = "<group>"; };
+		73BEA223203200890050E20A /* wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordlist.txt; sourceTree = "<group>"; };
+		73BEA224203200890050E20A /* SMSSpamCollection.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SMSSpamCollection.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 				73BEA20F2031F43A0050E20A /* AppDelegate.swift */,
 				73BEA2112031F43A0050E20A /* ViewController.swift */,
 				73BEA2132031F43A0050E20A /* Main.storyboard */,
+				73BEA224203200890050E20A /* SMSSpamCollection.txt */,
+				73BEA223203200890050E20A /* wordlist.txt */,
+				73BEA2212031F4890050E20A /* SpamClassifier.mlmodel */,
 				73BEA2162031F43A0050E20A /* Assets.xcassets */,
 				73BEA2182031F43A0050E20A /* LaunchScreen.storyboard */,
 				73BEA21B2031F43A0050E20A /* Info.plist */,
@@ -124,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				73BEA21A2031F43A0050E20A /* LaunchScreen.storyboard in Resources */,
+				73BEA226203200890050E20A /* SMSSpamCollection.txt in Resources */,
 				73BEA2172031F43A0050E20A /* Assets.xcassets in Resources */,
+				73BEA225203200890050E20A /* wordlist.txt in Resources */,
 				73BEA2152031F43A0050E20A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +149,7 @@
 			files = (
 				73BEA2122031F43A0050E20A /* ViewController.swift in Sources */,
 				73BEA2102031F43A0050E20A /* AppDelegate.swift in Sources */,
+				73BEA2222031F4890050E20A /* SpamClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

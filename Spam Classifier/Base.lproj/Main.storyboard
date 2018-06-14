@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Copperplate.ttc">
+            <string>Copperplate</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spam_Classifier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spam Classifier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an5-8w-rum">
+                                <rect key="frame" x="16" y="40" width="343" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vc3-dU-dsu">
+                                <rect key="frame" x="16" y="170.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7R-Wa-mFv">
+                                <rect key="frame" x="163" y="318.5" width="49" height="30"/>
+                                <state key="normal" title="Predict"/>
+                                <connections>
+                                    <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVV-Ha-WUX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spam or Ham?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhu-3X-LMg">
+                                <rect key="frame" x="16" y="100" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.82352941180000006" green="0.14117647059999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fhu-3X-LMg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="E9d-gF-HKv"/>
+                            <constraint firstItem="vc3-dU-dsu" firstAttribute="top" secondItem="fhu-3X-LMg" secondAttribute="bottom" constant="50" id="GXg-OS-Y87"/>
+                            <constraint firstItem="s7R-Wa-mFv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OhC-uS-ya5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fhu-3X-LMg" secondAttribute="trailing" constant="16" id="Pc5-Cc-vkR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vc3-dU-dsu" secondAttribute="trailing" constant="16" id="Zxg-PF-LoU"/>
+                            <constraint firstItem="vc3-dU-dsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a35-UP-G8j"/>
+                            <constraint firstItem="fhu-3X-LMg" firstAttribute="top" secondItem="an5-8w-rum" secondAttribute="bottom" constant="30" id="bP3-Zd-NPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="an5-8w-rum" secondAttribute="trailing" constant="16" id="cEO-jW-pwO"/>
+                            <constraint firstItem="an5-8w-rum" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dNM-MI-cB1"/>
+                            <constraint firstItem="an5-8w-rum" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nHG-ut-oDb"/>
+                            <constraint firstItem="s7R-Wa-mFv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yAP-Hi-uA8"/>
+                            <constraint firstItem="fhu-3X-LMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zTp-87-lwr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="checkBut" destination="s7R-Wa-mFv" id="r6O-7J-KoU"/>
+                        <outlet property="message_field" destination="vc3-dU-dsu" id="K51-uZ-Y0l"/>
+                        <outlet property="outputLabel" destination="fhu-3X-LMg" id="sQD-Wn-Sod"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
