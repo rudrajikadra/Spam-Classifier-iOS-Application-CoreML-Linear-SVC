@@ -14,3 +14,4 @@ The application will take message as input from the text box and when user taps 
 ## Here's How It Looks Like
 (Gif)
 
+![ezgif com-optimize](https://user-images.githubusercontent.com/15246084/41433315-21ae01c6-7036-11e8-8a7e-e3daaa8c7550.gif)
